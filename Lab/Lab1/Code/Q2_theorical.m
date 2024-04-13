@@ -21,10 +21,10 @@ end
      h = figure(i);  
      hLine1 = line(nan, nan, 'Color','red','linewidth', 2);
      plot(input_velocity(i)*(step(Gs(i))));
-     title('Resposta ao degrau (Modelo contínuo)');
+     title('Resposta ao degrau (Modelo contÃ­nuo)');
      xlabel('Tempo (s)');
      ylabel('Velocidade (rps)');
-     legend('velocidade de saída', 'Location', 'southeast');
+     legend('velocidade de saÃ­da', 'Location', 'southeast');
      grid on;
 
      
@@ -36,7 +36,7 @@ end
 %     stem(yd);
       xlabel('Tempo (s)');
       ylabel('Velocidade (rps)');
-      legend('velocidade de saída', 'Location', 'southeast');
+      legend('velocidade de saÃ­da', 'Location', 'southeast');
       title('Resposta ao degrau (Modelo discreto)');
       grid on
  
@@ -46,7 +46,7 @@ end
       xlabel('Tempo (s)');
       ylabel('Velocidade (rps)');
       legend('Erro de modelagem', 'Location', 'southeast');
-      title('Erro de saída entre modelo contínuo e discreto');
+      title('Erro de saÃ­da entre modelo contÃ­nuo e discreto');
       grid on
     
  end
