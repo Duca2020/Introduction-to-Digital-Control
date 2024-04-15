@@ -41,12 +41,12 @@ end
      h = figure(i);  
      hLine1 = line(nan, nan, 'Color','red','linewidth', 2);
      plot(input_velocity(i)*(step(Gs(i),x{i})));
-     title(strcat('Resposta ao degrau MA (modelo contínuo) para PWM ',pwm{i},'%'));
+     title(strcat('Resposta ao degrau MA (modelo contÃ­nuo) para PWM ',pwm{i},'%'));
      xlabel('Tempo (s)');
      ylabel('Velocidade (rps)');
-     legend('velocidade de saída', 'Location', 'southeast');
+     legend('velocidade de saÃ­da', 'Location', 'southeast');
      grid on;
-     saveas(gcf, strcat('C:\Users\franc\OneDrive\Documentos\Lab Controle Digital\1 pratica\Imagens\2)\modelagens\','Resposta ao degrau MA (modelo contínuo) para PWM ',pwm{i},'%.png'));
+     saveas(gcf, strcat('C:\Users\franc\OneDrive\Documentos\Lab Controle Digital\1 pratica\Imagens\2)\modelagens\','Resposta ao degrau MA (modelo contÃ­nuo) para PWM ',pwm{i},'%.png'));
      
   
       h = figure(i+4);  
@@ -56,7 +56,7 @@ end
 %     stem(yd);
       xlabel('Tempo (s)');
       ylabel('Velocidade (rps)');
-      legend('velocidade de saída', 'Location', 'southeast');
+      legend('velocidade de saÃ­da', 'Location', 'southeast');
      title(strcat('Resposta ao degrau MA (Modelo discreto) para PWM ',pwm{i},'%'));
       grid on
       saveas(gcf, strcat('C:\Users\franc\OneDrive\Documentos\Lab Controle Digital\1 pratica\Imagens\2)\modelagens\','Resposta ao degrau MA (modelo discreto) para PWM ',pwm{i},'%.png'));
@@ -66,10 +66,10 @@ end
       plot(x{i}, y{i} - input_velocity(i)*(step(Gs(i), x{i})));
       xlabel('Tempo (s)');
       ylabel('Velocidade (rps)');
-      legend('Erro de modelagem (modelo contínuo)', 'Location', 'southeast');
-      title(strcat('Erro de saída com modelo contínuo em PWM ', pwm{i}, '%'));
+      legend('Erro de modelagem (modelo contÃ­nuo)', 'Location', 'southeast');
+      title(strcat('Erro de saÃ­da com modelo contÃ­nuo em PWM ', pwm{i}, '%'));
       grid on
-      saveas(gcf, strcat('C:\Users\franc\OneDrive\Documentos\Lab Controle Digital\1 pratica\Imagens\2)\modelagens\','Erro de saída com modelo contínuo em PWM ',pwm{i},'%.png'));
+      saveas(gcf, strcat('C:\Users\franc\OneDrive\Documentos\Lab Controle Digital\1 pratica\Imagens\2)\modelagens\','Erro de saÃ­da com modelo contÃ­nuo em PWM ',pwm{i},'%.png'));
 
        h = figure(i+12);  
       hLine1 = line(nan, nan, 'Color','red','linewidth', 2);
@@ -77,9 +77,9 @@ end
       xlabel('Tempo (s)');
       ylabel('Velocidade (rps)');
       legend('Erro de modelagem (modelo discreto)', 'Location', 'southeast');
-      title(strcat('Erro de saída com modelo discreto em PWM ', pwm{i}, '%'));
+      title(strcat('Erro de saÃ­da com modelo discreto em PWM ', pwm{i}, '%'));
       grid on
-      saveas(gcf, strcat('C:\Users\franc\OneDrive\Documentos\Lab Controle Digital\1 pratica\Imagens\2)\modelagens\','Erro de saída com modelo discreto em PWM ',pwm{i},'%.png'));
+      saveas(gcf, strcat('C:\Users\franc\OneDrive\Documentos\Lab Controle Digital\1 pratica\Imagens\2)\modelagens\','Erro de saÃ­da com modelo discreto em PWM ',pwm{i},'%.png'));
 
     
       h = figure(i+16);  
@@ -87,7 +87,7 @@ end
       plot(x{i}, input_velocity(i)*(step(Gs(i), x{i})) - input_velocity(i)*step(d2c(Gd(i), 'tustin'),x{i}));
       xlabel('Tempo (s)');
       ylabel('Velocidade (rps)');
-      legend('Erro contínuo - discreto', 'Location', 'southeast');
+      legend('Erro contÃ­nuo - discreto', 'Location', 'southeast');
       title(strcat('Erro de entre modelagens em PWM ', pwm{i}, '%'));
       grid on
       saveas(gcf, strcat('C:\Users\franc\OneDrive\Documentos\Lab Controle Digital\1 pratica\Imagens\2)\modelagens\','Erro de entre modelagens em PWM ',pwm{i},'%.png'));
